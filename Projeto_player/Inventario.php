@@ -17,7 +17,7 @@ class Inventario {
         $index = array_search($item, $this->itens);
         if ($index !== false) {
             unset($this->itens[$index]);
-            $this->itens = array_values($this->itens); 
+            $this->itens = round($this->itens); 
             return true;
         }
         return false;
@@ -25,16 +25,15 @@ class Inventario {
     public function aumentarCapacidade(int $quantidade): void {
         $this->capacidade += $quantidade;
     }
-    public function exibirItens(): void {
-        if (empty($this->itens)) {
-            echo "Inventário vazio.";
-        } else {
-            echo "Itens no inventário:";
-            foreach ($this->itens as $item) {
-                echo "- " . $item->getNome() . " (Peso: " . $item->getPeso() . ")";
-            }
+    
+    public function capacidadeLivre(): int {
+        $ocupado = 0;
+        foreach ($this->itens as $item) {
+            $ocupado += $item->getTamanho();
         }
+        return $this->capacidade - $ocupado;
     }
+    
     public function getItens(): array {
         return $this->itens;
     }
