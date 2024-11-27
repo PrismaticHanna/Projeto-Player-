@@ -42,7 +42,7 @@ foreach (array_merge($itensAtaque, $itensDefesa, $itensMagia) as $item) {
 exibirInventario($player1);
 
 echo "{$player1->getNome()} subiu de nível!";
-$player1->subirLvl();
+$player1->subirNivel();
 echo "<br>";
 echo "Capacidade do inventário aumentada.";
 echo "<br>";
