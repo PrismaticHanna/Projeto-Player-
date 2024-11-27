@@ -27,9 +27,9 @@ class Inventario {
     }
     public function exibirItens(): void {
         if (empty($this->itens)) {
-            echo "Inventário vazio." . PHP_EOL;
+            echo "Inventário vazio.";
         } else {
-            echo "Itens no inventário:" . PHP_EOL;
+            echo "Itens no inventário:";
             foreach ($this->itens as $item) {
                 echo "- " . $item->getNome() . " (Peso: " . $item->getPeso() . ")";
             }
