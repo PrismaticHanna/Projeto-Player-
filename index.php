@@ -55,7 +55,7 @@ if ($player1->coletarItem($itemExtra)) {
 }
 echo "<br>";
 
-exibirInventario($player1);
+capacidadeLivre($player1);
 echo "<br>";
 
 echo "Adicionando itens ao inventário de {$player2->getNome()}:";
@@ -73,5 +73,5 @@ echo "<br>";
 echo "<br>";
 echo "Estado final do inventário de {$player2->getNome()}:";
 echo "<br>";
-exibirInventario($player2);
+capacidadeLivre($player2);
 ?>
