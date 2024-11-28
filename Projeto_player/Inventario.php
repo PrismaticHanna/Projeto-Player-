@@ -1,9 +1,10 @@
 <?php
+
 class Inventario {
     private array $itens;
     private int $capacidade;
-    public function __construct(int $capacidade) {
-        $this->capacidade = $capacidade;
+    public function __construct() {
+        $this->capacidade = 20;
         $this->itens = [];
     }
     public function adicionarItem($item): bool {
@@ -22,8 +23,9 @@ class Inventario {
         }
         return false;
     }
+    
     public function aumentarCapacidade(int $quantidade): void {
-        $this->capacidade += $quantidade;
+        $this->capacidade += $capacidade;
     }
     
     public function capacidadeLivre(): int {
