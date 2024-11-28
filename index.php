@@ -22,7 +22,7 @@ function exibirInventario($player) {
         echo "<br>";
     }
 
-    echo "Total de itens: " . count($itens);
+    echo "Total de itens: {$this->capacidadeLivre()}";
     echo "<br>";
 }
 
